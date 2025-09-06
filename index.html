@@ -46,7 +46,52 @@ html {
       text-decoration: underline;
       margin-left: 10px;
 }
+/*mobile responsive*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
 
+.logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+}
+
+  nav a {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #444;
+}
+
+.banner h2 {
+    font-size: 24px;
+}
+
+.banner p {
+    font-size: 16px;
+}
+
+.shop-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+.top-bar span {
+    animation: none;
+    white-space: normal;
+    display: block;
+    padding: 0 10px;
+}
+}
+    
+    
     /* 🧭 Header */
     header {
       background-color: #f8f8f8;
