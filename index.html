@@ -189,6 +189,142 @@ html {
       font-size: 18px;
       margin: 10px 0;
 }
+
+/* Countdown Timer Section */
+.countdown-section {
+    text-align: center;
+    padding: 60px 20px; /* প্যাডিং বাড়ানো হলো */
+    background: linear-gradient(135deg, #fce4ec, #e91e63); /* গ্লোবাল ব্যাকগ্রাউন্ডে গ্র্যাডিয়েন্ট */
+    box-shadow: inset 0 -5px 15px rgba(0,0,0,0.2); /* নিচের দিকে ইনসেট শ্যাডো */
+}
+
+.countdown-heading {
+    font-size: 36px; /* ফন্ট সাইজ বাড়ানো হলো */
+    color: #ffffff; /* সাদা রং, গ্লো ইফেক্টের জন্য */
+    margin-bottom: 30px; /* মার্জিন বাড়ানো হলো */
+    text-shadow: 0 0 10px rgba(255,255,255,0.7), 0 0 20px rgba(255,255,255,0.5); /* টেক্সটে গ্লো ইফেক্ট */
+    letter-spacing: 2px; /* অক্ষরের মাঝে দূরত্ব */
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* ব্যবধান বাড়ানো হলো */
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* আইটেমের ব্যাকগ্রাউন্ডে হালকা গ্র্যাডিয়েন্ট */
+    border: none; /* বর্ডার সরিয়ে ফেলা হলো */
+    color: #333; /* টেক্সট কালার গাঢ় করা হলো */
+    border-radius: 15px; /* বর্ডার রেডিয়াস বাড়ানো হলো */
+    padding: 25px 30px; /* প্যাডিং বাড়ানো হলো */
+    min-width: 120px; /* ন্যূনতম প্রস্থ বাড়ানো হলো */
+    text-align: center;
+    box-shadow: 
+        0 8px 20px rgba(0,0,0,0.2), /* 3D ডেপথের জন্য বড় শ্যাডো */
+        0 0 15px rgba(233,30,99,0.5), /* গ্লো ইফেক্টের জন্য পিঙ্ক শ্যাডো */
+        inset 0 0 10px rgba(255,255,255,0.5); /* ইনসেট শ্যাডো ভেতরের গ্লোর জন্য */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* মসৃণ ট্রানজিশন */
+}
+
+.countdown-item:hover {
+    transform: translateY(-5px) scale(1.02); /* হোভার করলে সামান্য উপরে ওঠা এবং বড় হওয়া */
+    box-shadow: 
+        0 12px 25px rgba(0,0,0,0.3), 
+        0 0 25px rgba(233,30,99,0.8), /* হোভারে গ্লো আরও বাড়বে */
+        inset 0 0 15px rgba(255,255,255,0.7);
+}
+
+.countdown-item span {
+    font-family: 'Orbitron', sans-serif; /* মডার্ন ফন্টের জন্য */
+    font-size: 60px; /* ফন্ট সাইজ আরও বাড়ানো হলো */
+    font-weight: 700; /* ফন্ট ওয়েট বাড়ানো হলো */
+    display: block;
+    line-height: 1.1;
+    color: #e91e63; /* পিঙ্ক কালার */
+    text-shadow: 
+        0 0 8px rgba(233,30,99,0.7), /* গ্লো ইফেক্ট */
+        0 0 15px rgba(233,30,99,0.4); /* হালকা গ্লো */
+    position: relative;
+    z-index: 1;
+}
+
+.countdown-item p {
+    font-size: 16px; /* ফন্ট সাইজ বাড়ানো হলো */
+    margin-top: 15px; /* মার্জিন বাড়ানো হলো */
+    text-transform: uppercase;
+    font-weight: 700; /* ফন্ট ওয়েট বাড়ানো হলো */
+    color: #666; /* হালকা গাঢ় ধূসর */
+    letter-spacing: 1px;
+}
+
+/* Optional: Add a subtle animation for digits */
+/* (This might require slight JS modification if you want to animate on change) */
+/* For a simple visual effect without JS animation on change: */
+.countdown-item span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+}
+
+.countdown-item:active span::after {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+
+/* Responsive for countdown */
+@media (max-width: 768px) {
+    .countdown-heading {
+        font-size: 28px;
+    }
+    .countdown-timer {
+        gap: 15px;
+    }
+    .countdown-item {
+        min-width: 90px;
+        padding: 18px 20px;
+        border-radius: 12px;
+    }
+    .countdown-item span {
+        font-size: 48px;
+    }
+    .countdown-item p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-heading {
+        font-size: 24px;
+    }
+    .countdown-item {
+        min-width: 70px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .countdown-item span {
+        font-size: 38px;
+    }
+    .countdown-item p {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+}
+    
 /* banner slider*/
 .banner-slider {
   position: relative;
@@ -566,6 +702,30 @@ nav.dropdown-content {
     <input type="text" placeholder="Search products...">
     <button type="submit">Search</button>
   </div>
+
+<!-----count down timer-->
+    <section class="countdown-section">
+    <h2 class="countdown-heading">WE ARE OPENING IN...</h2>
+    <div id="countdown-timer" class="countdown-timer">
+        <div class="countdown-item">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+        </div>
+    </div>
+</section>
+  
 <!-----clickable banner optional-->
 <section class="banner-slider">
   <div class="slider-container">
@@ -696,6 +856,40 @@ document.getElementById('close-welcome').addEventListener('click', function() {
     contact.style.display = 'block'; // Make sure it's visible
     contact.scrollIntoView({ behavior: 'smooth'}); // Scroll to it
 });
+
+// Countdown Timer Logic
+const countdown = document.getElementById('countdown-timer');
+
+if (countdown) {
+    // Set the opening date to 30 days from now
+    // Set a fixed end date for the countdown
+// Format: "Month Day, Year HH:MM:SS"
+const openDate = new Date("October 7, 2025 10:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+        const today = new Date().getTime();
+        const distance = openDate - today;
+
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById('countdown-timer').innerHTML = "<h2>We're Open! Shop Now!</h2>";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+
+    }, 1000);
+}
+}
+    
 </script>
 
 <!----footer section--->
