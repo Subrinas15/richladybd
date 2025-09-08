@@ -195,7 +195,7 @@ if (chatbotIcon && chatbotContainer && closeButton) {
             return "We have a wide range of makeup, skincare, and hair products. Which category are you interested in?";
         } else if (userMessage.includes("shipping") || userMessage.includes("delivery")) {
             return "Our shipping process usually takes 3-5 business days. Would you like to know more about our policy?";
-        } else if (userMessage.includes("shipping") || userMessage.includes("Sadia Sultana")) {
+        } else if (userMessage.includes("Sadiya") || userMessage.includes("Sadia")) {
             return "আপনি কি Sadia সম্পর্কে জানতে চাইছেন? 😊 তিনি আমাদের Marketing & Social Media Shop Manager।  আপনার অর্ডার, অফার বা যে কোনো তথ্যের জন্য Sadia আপনাকে সাহায্য করবেন।👉 Facebook Page বা WhatsApp-এ নক করুন।?";
         } else if (userMessage.includes("thank")) {
             return "You're most welcome! I'm happy to help. Is there anything else you'd like to know?";
@@ -258,3 +258,4 @@ openDate.setDate(openDate.getDate() + 46);
 }
 
 }
+
