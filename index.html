@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Richlady - Bangladesh's Best Beauty Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+<!----Top Bar-->
+    <div class="top-bar">
+        <span>We Are Opening very Soon--- Richhlady is a trusted e-commerce platform in Bangladesh
+            We source original beauty products directly from countries like Malaysia, Thailand, and more.
+            — <a href="#">Connect with us</a></span>
+    </div>
+<!---header-->
+    <header class="sticky-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Richlady Logo">
+        </div>
+        <nav>
+            <a href="#" onclick="location.reload()">Home</a>
+            <div class="mega-dropdown">
+                <a href="#">Category</a>
+                <div class="mega-content">
+                    <div class="mega-column">
+                        <h4>Makeup</h4>
+                        <a href="#">Face</a>
+                        <a href="#">Eyes</a>
+                        <a href="#">Lips</a>
+                    </div>
+                    <div class="mega-column">
+                        <h4>Skin</h4>
+                        <a href="#">Moisturizers</a>
+                        <a href="#">Cleansers</a>
+                        <a href="#">Masks</a>
+                    </div>
+                    <div class="mega-column">
+                        <h4>Hair</h4>
+                        <a href="#">Shampoo</a>
+                        <a href="#">Conditioner</a>
+                        <a href="#">Styling</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#best-sellers">Best Sellers</a>
+            <a href="#new-arrival">New Arrival</a>
+            <a href="#sale">Sale</a>
+            <a href="#contact-info">Contact Us</a>
+        </nav>
+        <div class="header-icons">
+            <div id="search-box">
+    <input type="text" id="search-input" placeholder="Search products...">
+            <div id="search-results-container"></div>
+            </div>
+            <a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    </header>
+    <!-----count down timer-->
+    <section class="countdown-section">
+    <h2 class="countdown-heading">WE ARE OPENING IN...</h2>
+    <div id="countdown-timer" class="countdown-timer">
+        <div class="countdown-item">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+        </div>
+    </div>
+</section>
+
+<!----banner slider-->
+    <section class="banner-slider">
+        <div class="slider-container">
+            <img src="images/banner1.png" class="slide active" alt="Banner 1">
+            <img src="images/banner2.png" class="slide" alt="Banner 2">
+            <img src="images/banner3.png" class="slide" alt="Banner 3">
+            <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+            <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+    </section>
+
+     <!---Product section-->
+    <section class="product-grid-section">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-grid">
+        <a href="product.html?id=1" class="product-card">
+            <div class="product-image-container">
+                <img src="images/airbrush-matte.jpg" alt="Airbrush Matte">
+                <span class="product-badge featured">Featured</span>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">এয়ারব্রাশ ম্যাট</h3>
+                <span class="product-price sale-price">৳ 2,500</span>
+                <span class="product-price original-price">৳ 2,800</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </a>
+
+        <a href="product.html?id=2" class="product-card">
+            <div class="product-image-container">
+                <img src="images/extra-lip-tint.jpg" alt="Extra Lip Tint">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">এক্সট্রা লিপ টিন্ট</h3>
+                <span class="product-price">৳ 1,800</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </a>
+
+        <a href="product.html?id=3" class="product-card">
+            <div class="product-image-container">
+                <img src="images/bodifying-shampoo.jpg" alt="Bodifying Shampoo">
+                <span class="product-badge new">NEW</span>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">বডিফাইং শ্যাম্পু</h3>
+                <span class="product-price">৳ 2,200</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </a>
+
+        <a href="product.html?id=4" class="product-card">
+            <div class="product-image-container">
+                <img src="images/flowerbomb.jpg" alt="Flowerbomb">
+                <span class="product-badge featured">Featured</span>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">ফ্লাওয়ারবম্ব</h3>
+                <span class="product-price">৳ 12,000</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </a>
+        
+        <a href="product.html?id=5" class="product-card">
+            <div class="product-image-container">
+                <img src="images/hair-coloring.jpg" alt="Hair Coloring">
+                <span class="product-badge sale">-10%</span>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">হেয়ার কালারিং</h3>
+                <span class="product-price sale-price">৳ 1,500</span>
+                <span class="product-price original-price">৳ 1,800</span>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </a>
+    </div>
+</section>
+
+    <div class="banner">
+        <h2>New Arrival</h2>
+        <p>UP TO 55% OFF</p>
+        <a href="#" class="shop-btn">SHOP NOW</a>
+    </div>
+
+    <div id="best-sellers" style="padding:60px 20px; background:#fdf1f4; text-align:center;">
+        <h2 style="color:#e91e63;">Best Sellers</h2>
+        <p>Explore our top-selling products loved by thousands!</p>
+    </div>
+
+    <div id="new-arrival" style="padding:60px 20px; background:#fff0f5; text-align:center;">
+        <h2 style="color:#e91e63;">New Arrival</h2>
+        <p>Fresh styles just dropped. Be the first to grab them!</p>
+    </div>
+
+    <div id="sale" style="padding:60px 20px; background:#ffe4e1; text-align:center;">
+        <h2 style="color:#e91e63;">Sale</h2>
+        <p>Up to 55% OFF on selected items. Limited time only!</p>
+    </div>
+
+    <div id="contact-info" style="background-color:#f9f9f9; padding:30px 20px; text-align:center;">
+        <h3 style="color:#e91e63;">Contact Us</h3>
+        <p>Email: <a href="mailto:support@reachlady.com">support@reachlady.com</a></p>
+        <p>Phone: +65 1234 5678</p>
+        <p>Address: 123 Fashion Street, Singapore</p>
+
+        <div style="margin-top:30px;">
+            <h4 style="margin-bottom:15px;">Follow Us</h4>
+            <a href="https://www.tiktok.com/@richladybd" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/richladybd" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/richladybd" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    
+    <div id="chatbot-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <span>Sultana</span>
+            <button id="close-chatbot">&times;</button>
+        </div>
+        <div id="chatbot-body">
+            <div class="message bot-message">
+                <p>Hi there! I am Sultana, your personal beauty assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div id="chatbot-footer">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <div id="welcome-message">
+        <span id="close-welcome">&times;</span>
+        <p>👋 Welcome to Reachlady! Need help? Chat with us on WhatsApp.</p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>RICHLADY</h3>
+                <p>Richhlady is a trusted e-commerce platform in Bangladesh offering 100% authentic, imported, and branded skincare and cosmetics.
+                    We source original beauty products directly from countries like Malaysia, Thailand, and more — ensuring premium quality and genuine results.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Makeup</a></li>
+                    <li><a href="#">Gadget</a></li>
+                    <li><a href="#">Health & Fitness</a></li>
+                    <li><a href="#">Cosmetics</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Join Group</a></li>
+                    <li><a href="#">Info</a></li>
+                    <li><a href="#">Skin Care</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/reachladybd" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/reachladybd" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@reachladybd" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Richladybd.com © 2025 All rights reserved</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
