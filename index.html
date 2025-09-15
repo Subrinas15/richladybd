@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Richlady - Bangladesh's Best Beauty Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!----Top Bar-->
+    <div class="top-bar">
+        <span>We Are Opening very Soon--- Richhlady is a trusted e-commerce platform in Bangladesh
+            We source original beauty products directly from countries like Malaysia, Thailand, and more.
+            — <a href="#">Connect with us</a></span>
+    </div>
+
+        <!---header-->
+<header class="main-header" id="mainHeader">
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Richlady Logo">
+        </div>
+
+        <div class="header-search-bar">
+            <input type="text" placeholder="Search for products, brands and more...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="header-action-icons">
+            <a href="#" class="icon-link"><i class="fas fa-user"></i> <span class="icon-text">Account</span></a>
+            <a href="#" class="icon-link"><i class="fas fa-heart"></i> <span class="icon-text">Wishlist</span></a>
+            <a href="#" class="icon-link cart-link">
+                <i class="fas fa-shopping-cart"></i> 
+                <span class="icon-text">Cart</span>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="#" class="currency-link">
+                <span style="font-family: 'Hind Siliguri', sans-serif; font-weight: 700;">৳</span>
+            </a>
+        </div>
+
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <nav class="header-nav-menu" id="headerNavMenu">
+        <a href="#">Home</a>
+        <div class="mega-dropdown">
+            <a href="#">Category <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-content">
+                <div class="mega-column">
+                    <h4>Makeup</h4>
+                    <a href="#">Face</a>
+                    <a href="#">Eyes</a>
+                    <a href="#">Lips</a>
+                    <a href="#">Nails</a>
+                    <a href="#">Tools & Brushes</a>
+                </div>
+                <div class="mega-column">
+                    <h4>Skincare</h4>
+                    <a href="#">Moisturizers</a>
+                    <a href="#">Cleansers</a>
+                    <a href="#">Masks</a>
+                    <a href="#">Serums</a>
+                    <a href="#">Sunscreen</a>
+                </div>
+                <div class="mega-column">
+                    <h4>Haircare</h4>
+                    <a href="#">Shampoo</a>
+                    <a href="#">Conditioner</a>
+                    <a href="#">Styling Products</a>
+                    <a href="#">Hair Treatments</a>
+                </div>
+                 <div class="mega-column">
+                    <h4>Fragrance</h4>
+                    <a href="#">Perfumes</a>
+                    <a href="#">Deodorants</a>
+                    <a href="#">Body Mist</a>
+                </div>
+            </div>
+        </div>
+        <a href="#best-sellers">Best Sellers</a>
+        <a href="#new-arrival">New Arrival</a>
+        <a href="#sale">Sale</a>
+    </nav>
+</header>
+
+    
+    <!-----count down timer-->
+    <section class="countdown-section">
+    <h2 class="countdown-heading">WE ARE OPENING IN...</h2>
+    <div id="countdown-timer" class="countdown-timer">
+        <div class="countdown-item">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+        </div>
+    </div>
+</section>
+
+<!----banner slider-->
+    <section class="banner-slider">
+        <div class="slider-container">
+            <img src="images/banner1.png" class="slide active" alt="Banner 1">
+            <img src="images/banner2.png" class="slide" alt="Banner 2">
+            <img src="images/banner3.png" class="slide" alt="Banner 3">
+            <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+            <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        </div>
+</section>
+
+    <!-- 🚀 New Arrival Section -->
+<div id="new-arrival" style="padding:60px 20px; background:#fff0f5; text-align:center;">
+  <h2 style="color:#e91e63;">New Arrival</h2>
+  <p>Fresh styles just dropped. Be the first to grab them!</p>
+
+  <div class="slider-wrapper">
+    <button class="prev-btn" data-target="new-products">&#10094;</button>
+    <div id="new-products" class="products-grid"></div>
+    <button class="next-btn" data-target="new-products">&#10095;</button>
+  </div>
+</div>
+
+<!-- 💸 Sale Section -->
+<div id="sale" style="padding:60px 20px; background:#ffe4e1; text-align:center;">
+  <h2 style="color:#e91e63;">Sale</h2>
+  <p>Up to 55% OFF on selected items. Limited time only!</p>
+
+  <div class="slider-wrapper">
+    <button class="prev-btn" data-target="sale-products">&#10094;</button>
+    <div id="sale-products" class="products-grid"></div>
+    <button class="next-btn" data-target="sale-products">&#10095;</button>
+  </div>
+</div>
+<!-- Optional: default container for all products -->
+<section id="products-container" class="products-grid"></section>
+
+    </div>
+
+    <div id="chatbot-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <span>Sultana</span>
+            <button id="close-chatbot">&times;</button>
+        </div>
+        <div id="chatbot-body">
+            <div class="message bot-message">
+                <p>Hi there! I am Sultana, your personal beauty assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div id="chatbot-footer">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <div id="welcome-message">
+        <span id="close-welcome">&times;</span>
+        <p>👋 Welcome to Reachlady! Need help? Chat with us on WhatsApp.</p>
+    </div>
+
+  <!------launchingSoonPopup------>
+    <div id="launchingSoonPopup" class="launching-soon-popup">
+    <div class="popup-content">
+        <span class="close-popup" id="closePopup">&times;</span>
+        <p class="popup-title">🚀 We're Launching Soon!</p>
+        <p>আমাদের ওয়েবসাইট এখনো প্রস্তুত হচ্ছে, কিন্তু আপনি চাইলে এখনই <b>Pre-Order</b> করতে পারেন।</p>
+        <p>👉 Facebook Page বা WhatsApp-এ Knock করুন 🛒</p>
+        <div class="social-links-popup">
+            <a href="https://www.facebook.com/Richladybdfb" target="_blank">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+        <p class="popup-thanks">✨ ধন্যবাদ আমাদের সাথে থাকার জন্য ✨</p>
+    </div>
+</div>
+
+<!------Product details Popup------>
+   <div id="product-details-popup" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="popup-inner-content">
+            <div class="popup-image-container">
+                <img id="popup-image" src="" alt="Product Image">
+            </div>
+            <div class="popup-details">
+                <h3 id="popup-title"></h3>
+                <div class="popup-price-container">
+                    <span id="popup-original-price" class="original-price"></span>
+                    <span id="popup-discounted-price" class="discounted-price"></span>
+                </div>
+                <p id="popup-description"></p>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>RICHLADY</h3>
+                <p>Richhlady is a trusted e-commerce platform in Bangladesh offering 100% authentic, imported, and branded skincare and cosmetics.
+                    We source original beauty products directly from countries like Malaysia, Thailand, and more — ensuring premium quality and genuine results.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Makeup</a></li>
+                    <li><a href="#">Gadget</a></li>
+                    <li><a href="#">Health & Fitness</a></li>
+                    <li><a href="#">Cosmetics</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Join Group</a></li>
+                    <li><a href="#">Info</a></li>
+                    <li><a href="#">Skin Care</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Richladybdfb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/richladybd" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@richladybd" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ✅ Cart Popup (Place before </body>) -->
+         
+<div id="cart-popup" class="cart-popup">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <span id="close-cart" class="close-btn">&times;</span>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <p>Total: ৳<span id="cart-total">0</span></p>
+    <button id="checkout-btn">Proceed to Pay</button>
+  </div>
+</div>
+
+        <div class="footer-bottom">
+            <p>Richladybd.com © 2025 All rights reserved</p>
+        </div>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>>
